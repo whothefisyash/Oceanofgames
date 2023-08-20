@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#loading{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #ffffff url(Images/preloader.gif) no-repeat center;
+    z-index: 10000;
+}
+.main::before{
+    /* background-image: linear-gradient(to right, black, #f90000b8); */
+    background-image: url(Images/bg.png);
+    background-size: cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* opacity: 0.8; */
+}
+.header{
+    /* border: 2px solid red; */
+    display: block;
+    padding: 22px 20px;
+    padding-bottom: 6px;
+    /* background-color: black; */
+    color: white;
+    font-family: 'Syne Mono', monospace;
+}
+h1{
+    display: block;
+    font-size: 60px;
+}
+h4{
+    display: inline-block;
+    font-size: 20px;
+    border-left: 5px solid #ff7777;
+    padding: 5px 0px 0px 5px;
+    margin-left: 7px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 1rem;
+}
+.box{
+    background-color: white;
+    /* border: 2px solid black; */
+    text-align: center;
+    height: 450px;
+    margin: 20px 10px;
+    box-shadow: 0px 0px 10px red;
+    font-family: 'Playfair Display', serif;
+}
+.heading{
+    font-size: 40px;
+    text-shadow: 0.9px 1.4px 2px #e01414c2;
+    margin: 26px;
+}
+.info{
+    text-align: center;
+    /* padding-left: 10px; */
+    margin: 0px 27px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 88%;
+    border-bottom: 2px solid black;
+}
+.info input{
+    width: 87%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 8px;
+    /* text-align: center; */
+    /* border: 2px solid red; */
+}
+.info i{
+    width: 30px;
+    text-align: center;
+    padding: 2px;
+}
+/* #divstatus{
+    border: none;
+}
+#status{
+    width: 75%;
+    padding: 10px;
+    font-size: 20px;
+    text-align-last: center;
+    border-radius: 24px;
+    outline: none;
+    color: rgb(221, 62, 62);
+    border: 2px solid black;
+    margin: 10px;
+}
+#status:hover{
+    cursor: pointer;
+} */
+.btn_submit{
+    margin: 15px 0px;
+    text-align: center;
+    width: 50%;
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: #fd7d7dba;
+    outline: none;
+}
+#remove{
+    width: 70%;
+}
+.btn_submit:hover{
+    cursor: pointer;
+    background-color: #ff000080;
+}
+.btn_submit:active{
+    text-decoration: underline; 
+}
+#heading3{
+    font-size: 20px;
+    margin: 20px 35px;
+    text-align: justify;
+}
+#uid{
+    width: 85%;
+    margin-top: 10px;
+}
+#admin{
+    margin: 30px 0px;
+    
+}

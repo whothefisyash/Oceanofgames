@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="login.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8af6f81983.js" crossorigin="anonymous"></script>
+
+<body>
+    <div id="loading"></div>
+    <div class="main">
+        <div class="header">
+            <h1>GameIt</h1>
+            <h4>A fathomless world of online games</h4>
+        </div>
+        <div class="box">
+            <div class="container">
+                <p class="heading">Welcome Back</p>
+                <div class="info">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+
+                <div class="info">
+                    <i class="fa fa-unlock-alt"></i>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <i class="fa fa-eye" id="eye"></i>
+                    <i class="fa fa-eye-slash" id="slasheye"></i>
+                </div>
+                <div class="fpassword">
+                    <a href="forgetpassword.html">Forgot Password?</a>
+                </div>
+                <div class="login">
+                    <button id="btn_login" onclick="login()">Login</button>
+                </div>
+                <div class="federated">
+                    <button class="btn" id="google" onclick="googlesign()">Sign in with Google</button>
+                    <button class="btn" id="facebook" onclick="facebooksign()">Sign in with Facebook</button>
+                </div>
+                <div class="signup">
+                    <p>Don't have an account? <a href="register.html">Register here</a></p>
+                </div>
+                <div class="warning">
+                    <p>* To access the admin feature, it is advised not to use federated login.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCDMvFD5zthICujULAK7ocBmpZamJ7View",
+    authDomain: "gamebase-fa264.firebaseapp.com",
+    projectId: "gamebase-fa264",
+    storageBucket: "gamebase-fa264.appspot.com",
+    messagingSenderId: "307863343800",
+    appId: "1:307863343800:web:8a4bf144a06b04f4869a4d",
+    measurementId: "G-5L8T4Q6WGY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="login.js"></script>
+
+</html>

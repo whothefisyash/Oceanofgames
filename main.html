@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameIt</title>
+</head>
+<link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8af6f81983.js" crossorigin="anonymous"></script>
+
+<body onload="optSel()">
+  <div id="loading"></div>
+  <div class="main">
+    <div class="header">
+      <h1>GameIt</h1>
+      <select name="filter" id="filterid" onchange="changed()">
+        <!-- <option class="options" disabled="disabled" selected="selected">Select Genre</option> -->
+        <option class="options" value="Best">Best</option>
+        <option class="options" value="Arcade">Arcade</option>
+        <option class="options" value="Cards">Cards</option>
+        <option class="options" value="Girls">Girls</option>
+        <option class="options" value="Puzzle">Puzzle</option>
+        <option class="options" value="Quiz">Quiz</option>
+        <option class="options" value="Racing">Racing</option>
+        <option class="options" value="Sports">Sports</option>
+        <option class="options" value="New">New</option>
+        
+      </select>
+      <div class="searchbar">
+        <div class="search">
+          <i class="fa fa-search"></i>
+          <input type="text" name="text" id="searchgame" placeholder="Search (Enter at least two characters)">
+        </div>
+        <ul id="gamelist">
+          <li class=result id="name1"><a href="#" id="link1">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name2"><a href="#" id="link2">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name3"><a href="#" id="link3">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name4"><a href="#" id="link4">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name5"><a href="#" id="link5">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name6"><a href="#" id="link6">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name7"><a href="#" id="link7">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name8"><a href="#" id="link8">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name9"><a href="#" id="link9">Lorem ipsum dolor sit amet.</a></li>
+          <li class=result id="name10"><a href="#" id="link10">Lorem ipsum dolor sit amet.</a></li>
+        </ul>
+      </div>
+      <div class="user">
+        <select name="user" id="useroptions" onchange="optionselect()">
+          <option class="option" disabled="disabled" selected="selected">Options</option>
+          <option value="admin" id="admin">Admin Portal</option>
+          <option value="logout" id="logout">Logout</option>
+        </select>
+      </div>
+      <h4>A fathomless world of online games</h4>
+    </div>
+    
+    <div class="games">
+      <div class="game" id="game1">
+
+        <div class="flip" id="flip1">
+          <h3 id="head1"></h3>
+          <br>
+          <p id="desc1"></p>
+        </div>
+      </div>
+      <div class="game" id="game2">
+
+        <div class="flip" id="flip2">
+          <h3 id="head2"></h3>
+          <br>
+          <p id="desc2"></p>
+        </div>
+      </div>
+      <div class="game" id="game3">
+
+        <div class="flip" id="flip3">
+          <h3 id="head3"></h3>
+          <br>
+          <p id="desc3"></p>
+        </div>
+      </div>
+      <div class="game" id="game4">
+
+        <div class="flip" id="flip4">
+          <h3 id="head4"></h3>
+          <br>
+          <p id="desc4"></p>
+        </div>
+      </div>
+      <div class="game" id="game5">
+
+        <div class="flip" id="flip5">
+          <h3 id="head5"></h3>
+          <br>
+          <p id="desc5"></p>
+        </div>
+      </div>
+      <div class="game" id="game6">
+
+        <div class="flip" id="flip6">
+          <h3 id="head6"></h3>
+          <br>
+          <p id="desc6"></p>
+        </div>
+      </div>
+      <div class="game" id="game7">
+
+        <div class="flip" id="flip7">
+          <h3 id="head7"></h3>
+          <br>
+          <p id="desc7"></p>
+        </div>
+      </div>
+      <div class="game" id="game8">
+
+        <div class="flip" id="flip8">
+          <h3 id="head8"></h3>
+          <br>
+          <p id="desc8"></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+var firebaseConfig = {
+  apiKey: "AIzaSyCDMvFD5zthICujULAK7ocBmpZamJ7View",
+  authDomain: "gamebase-fa264.firebaseapp.com",
+  projectId: "gamebase-fa264",
+  storageBucket: "gamebase-fa264.appspot.com",
+  messagingSenderId: "307863343800",
+  appId: "1:307863343800:web:8a4bf144a06b04f4869a4d",
+  measurementId: "G-5L8T4Q6WGY"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+</script>
+
+<script src="main.js"></script>
+<!-- <script src="test.js"></script> -->
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+</head>
+<link rel="stylesheet" href="admin.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/8af6f81983.js" crossorigin="anonymous"></script>
+
+<body>
+    <div id="loading"></div>
+    <div class="main">
+        <div class="header">
+            <h1>GameIt</h1>
+            <h4>A fathomless world of online games</h4>
+        </div>
+        <div class="container">
+            <div class="box" id="addgame">
+                <p class="heading" id="heading1">Upload Game</p>
+                <div class="info" id="info1">
+                    <i class="fa fa-gamepad"></i>
+                    <input type="text" id="gamename" placeholder="Game Title">
+                </div>
+                <div class="info" id="info2">
+                    <i class="fa fa-paragraph"></i>
+                    <input type="text" id="gamedesc" placeholder="Game Description">
+                </div>
+                <div class="info" id="info3">
+                    <i class="fa fa-file-image-o"></i>
+                    <input type="text" id="gameimage" placeholder="Image URL">
+                </div>
+                <div class="info" id="info4">
+                    <i class="fa fa-external-link"></i>
+                    <input type="text" id="gamelink" placeholder="Game Link">
+                </div>
+                <div class="btn">
+                    <button class="btn_submit" id="upload" onclick="upload()">Upload</button>
+                </div>
+            </div>
+            <div class="box" id="makeadmin">
+                <p class="heading" id="heading2">Make/Remove Admin</p>
+                <p id="heading3">Please enter the email of the user whose admin status needs to be changed.</p>
+                <!-- <div class="info" id="divstatus">
+                    <select name="status" id="status">
+                        <option value="make">Make Admin</option>
+                        <option value="remove">Remove from Admin</option>
+                    </select>
+                </div> -->
+                <div class="info">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <input type="email" id="email" placeholder="User Email">
+                </div>
+                <div class="btn">
+                    <button class="btn_submit" id="make" onclick="make()">Make Admin</button>
+                    <button class="btn_submit" id="remove" onclick="remove()">Remove from Admin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+<script src="admin.js"></script>
+
+</html>
