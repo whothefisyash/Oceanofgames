@@ -12,5 +12,5 @@ This is an online gaming website that provides a user-friendly platform for game
 
 ## Website Link
 
-[Click here](https://harshitagarwal846.github.io/GameBase/) to enter the fathomless world of online games.
+[Click here](https://github.com/whothefisyash/Oceanofgames) to enter the fathomless world of online games.
 
